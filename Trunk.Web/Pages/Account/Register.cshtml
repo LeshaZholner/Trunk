@@ -1,0 +1,39 @@
+﻿@page
+@model Trunk.Web.Pages.Account.RegisterModel
+@{
+    Layout = "_AuthLayout";
+}
+
+<div class="row justify-content-center align-items-center vh-100">
+    <div class="col-12 col-md-5">
+        <div class="card card-body p-5">
+            <form id="registerForm" asp-page="/Account/Register" method="post">
+                <h2 class="text-center">
+                    Sign up
+                </h2>
+                <p class="text-center">
+                    Already have an account? <a asp-page="/Account/Login">Sign in here</a>
+                </p>
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="mb-3">
+                    <input asp-for="InputModel.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Enter email" />
+                    <span asp-validation-for="InputModel.Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <input asp-for="InputModel.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Enter password" />
+                    <span asp-validation-for="InputModel.Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <input asp-for="InputModel.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Confirm password" />
+                    <span asp-validation-for="InputModel.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button id="registerSubmit" type="submit" class="w-100 btn btn-primary">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

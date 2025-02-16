@@ -1,0 +1,21 @@
+﻿@page
+@model Trunk.Web.Pages.Account.LogoutModel
+@{
+    Layout = "_AuthLayout";
+}
+<div class="row justify-content-center align-items-center vh-100">
+    <div class="col-12 col-md-5">
+        <div class="card card-body p-5">
+            <form id="logoutForm" asp-page="/Account/Logout" method="post">
+                <h2 class="text-center">
+                    Logging out
+                </h2>
+                <p class="text-center">
+                    You will be logged out from apps. Do you wish to continue?
+                </p>
+                <button id="logoutSubmit" type="submit" class="w-100 btn btn-primary">Logout</button>
+                <small><a asp-page="/Index">« Back to Application</a></small>
+            </form>
+        </div>
+    </div>
+</div>

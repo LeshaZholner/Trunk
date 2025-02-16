@@ -1,0 +1,45 @@
+﻿@page
+@model Trunk.Web.Pages.Profile.IndexModel
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex profile__DataContainer">
+                    <div class="profile__PhotoContainer">
+                        <div class="profile__Photo">
+                            <img />
+                        </div>
+                    </div>
+                    <div class="profile__InfoContainer">
+                        <div class="profile__Title">
+                            @Model.ProfileViewModel.UserName
+                        </div>
+                        <div class="profile__JobTitle">
+                            Software Engineer
+                        </div>
+                        <div class="profile__Email">
+                            @Model.ProfileViewModel.Email
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer py-0">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" asp-page="/Profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Profile">Wall</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Profile">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Profile">Bagdes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
